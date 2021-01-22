@@ -26,7 +26,7 @@
                         <tr>
                             <th>商談状況</th>
                             <td>
-                                <pre><c:out value="${report.content}" /></pre>
+                                <pre><c:out value="${report.sales}" /></pre>
                             </td>
                         </tr>
                         <tr>

@@ -33,6 +33,7 @@ import javax.persistence.Table;
             name = "getMyReportsCount",
             query = "SELECT COUNT(r) FROM Report AS r WHERE r.employee = :employee"
         )
+
 })
 @Entity
 public class Report {
@@ -54,6 +55,20 @@ public class Report {
     @Lob
     @Column(name = "content", nullable = false)
     private String content;
+
+    @Lob
+    @Column(name = "sales", nullable = false)
+    private String sales;
+
+
+
+    public String getSales() {
+        return sales;
+    }
+
+    public void setSales(String sales) {
+        this.sales = sales;
+    }
 
     @Column(name = "created_at", nullable = false)
     private Timestamp created_at;
@@ -100,6 +115,8 @@ public class Report {
     public void setContent(String content) {
         this.content = content;
     }
+
+
 
     public Timestamp getCreated_at() {
         return created_at;
